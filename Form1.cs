@@ -24,14 +24,13 @@ namespace Semana5
                 return;
             }
         }
-
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
             else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
-            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
             else { e.Handled = true; MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
         }
+        
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -45,7 +44,7 @@ namespace Semana5
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            cbtipoinfo.Text = "Nombre";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -150,6 +149,7 @@ namespace Semana5
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            // Limpiar la matriz
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -157,7 +157,42 @@ namespace Semana5
                     matriz[i, j] = null;
                 }
             }
-            
+
+            // Limpiar el DataGridView
+            dgdatos.Rows.Clear();
+            dgdatos.Columns.Clear();
+
+            // Reiniciar los contadores 
+            fila1 = 0;
+            fila2 = 0;
+            fila3 = 0;
+            countenger = 0;
+
+            MessageBox.Show("Matriz y DataGridView limpiados exitosamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btPromedio_Click(object sender, EventArgs e)
+        {
+            int sumaEdades = 0;
+            int cantidadEdades = 0;
+
+            // Recorrer la columna de edades (columna 2)
+            for (int i = 0; i < 3; i++)
+            {
+                if (matriz[i, 2] != null) // Verificar si la celda no está vacía
+                {
+                    sumaEdades += int.Parse(matriz[i, 2]); // Sumar la edad
+                    cantidadEdades++;
+                }
+            }
+            int promedioEdades = sumaEdades / cantidadEdades;
+            MessageBox.Show($"El promedio de edades es de {promedioEdades}", "Promedio", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

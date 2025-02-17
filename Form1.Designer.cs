@@ -58,9 +58,11 @@ namespace Semana5
             gbInformacon.Controls.Add(textBox1);
             gbInformacon.Controls.Add(cbtipoinfo);
             gbInformacon.Controls.Add(Lbtipo_info);
-            gbInformacon.Location = new Point(12, 30);
+            gbInformacon.Location = new Point(8, 18);
+            gbInformacon.Margin = new Padding(2);
             gbInformacon.Name = "gbInformacon";
-            gbInformacon.Size = new Size(462, 231);
+            gbInformacon.Padding = new Padding(2);
+            gbInformacon.Size = new Size(323, 139);
             gbInformacon.TabIndex = 0;
             gbInformacon.TabStop = false;
             gbInformacon.Text = "Informacion";
@@ -69,9 +71,10 @@ namespace Semana5
             // 
             lbedad.AutoSize = true;
             lbedad.Font = new Font("Segoe UI", 12F);
-            lbedad.Location = new Point(23, 175);
+            lbedad.Location = new Point(16, 105);
+            lbedad.Margin = new Padding(2, 0, 2, 0);
             lbedad.Name = "lbedad";
-            lbedad.Size = new Size(66, 32);
+            lbedad.Size = new Size(44, 21);
             lbedad.TabIndex = 5;
             lbedad.Text = "Edad";
             // 
@@ -79,25 +82,28 @@ namespace Semana5
             // 
             Lbdig_info.AutoSize = true;
             Lbdig_info.Font = new Font("Segoe UI", 9F);
-            Lbdig_info.Location = new Point(0, 124);
+            Lbdig_info.Location = new Point(0, 74);
+            Lbdig_info.Margin = new Padding(2, 0, 2, 0);
             Lbdig_info.Name = "Lbdig_info";
-            Lbdig_info.Size = new Size(202, 25);
+            Lbdig_info.Size = new Size(135, 15);
             Lbdig_info.TabIndex = 4;
             Lbdig_info.Text = "Digitalize la información";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(209, 178);
+            textBox2.Location = new Point(146, 107);
+            textBox2.Margin = new Padding(2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(232, 31);
+            textBox2.Size = new Size(164, 23);
             textBox2.TabIndex = 3;
             textBox2.KeyPress += textBox2_KeyPress;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(209, 118);
+            textBox1.Location = new Point(146, 71);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(232, 31);
+            textBox1.Size = new Size(164, 23);
             textBox1.TabIndex = 2;
             textBox1.KeyPress += textBox1_KeyPress;
             // 
@@ -105,9 +111,10 @@ namespace Semana5
             // 
             cbtipoinfo.FormattingEnabled = true;
             cbtipoinfo.Items.AddRange(new object[] { "Nombre", "Apellido" });
-            cbtipoinfo.Location = new Point(209, 61);
+            cbtipoinfo.Location = new Point(146, 37);
+            cbtipoinfo.Margin = new Padding(2);
             cbtipoinfo.Name = "cbtipoinfo";
-            cbtipoinfo.Size = new Size(232, 33);
+            cbtipoinfo.Size = new Size(164, 23);
             cbtipoinfo.TabIndex = 1;
             cbtipoinfo.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -115,9 +122,10 @@ namespace Semana5
             // 
             Lbtipo_info.AutoSize = true;
             Lbtipo_info.Font = new Font("Segoe UI", 10F);
-            Lbtipo_info.Location = new Point(0, 61);
+            Lbtipo_info.Location = new Point(0, 37);
+            Lbtipo_info.Margin = new Padding(2, 0, 2, 0);
             Lbtipo_info.Name = "Lbtipo_info";
-            Lbtipo_info.Size = new Size(188, 28);
+            Lbtipo_info.Size = new Size(130, 19);
             Lbtipo_info.TabIndex = 0;
             Lbtipo_info.Text = "Tipo de información";
             // 
@@ -128,36 +136,43 @@ namespace Semana5
             gbMatriz.Controls.Add(btnLimpiar);
             gbMatriz.Controls.Add(btnMostrar);
             gbMatriz.Controls.Add(btnAgregar);
-            gbMatriz.Location = new Point(522, 30);
+            gbMatriz.Location = new Point(365, 18);
+            gbMatriz.Margin = new Padding(2);
             gbMatriz.Name = "gbMatriz";
-            gbMatriz.Size = new Size(471, 231);
+            gbMatriz.Padding = new Padding(2);
+            gbMatriz.Size = new Size(330, 139);
             gbMatriz.TabIndex = 1;
             gbMatriz.TabStop = false;
             gbMatriz.Text = "Matriz";
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(242, 125);
+            btnSalir.Location = new Point(169, 75);
+            btnSalir.Margin = new Padding(2);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(130, 34);
+            btnSalir.Size = new Size(91, 20);
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btPromedio
             // 
-            btPromedio.Location = new Point(242, 59);
+            btPromedio.Location = new Point(169, 35);
+            btPromedio.Margin = new Padding(2);
             btPromedio.Name = "btPromedio";
-            btPromedio.Size = new Size(130, 34);
+            btPromedio.Size = new Size(91, 20);
             btPromedio.TabIndex = 3;
             btPromedio.Text = "Promedio";
             btPromedio.UseVisualStyleBackColor = true;
+            btPromedio.Click += btPromedio_Click;
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(34, 155);
+            btnLimpiar.Location = new Point(24, 93);
+            btnLimpiar.Margin = new Padding(2);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(136, 34);
+            btnLimpiar.Size = new Size(95, 20);
             btnLimpiar.TabIndex = 2;
             btnLimpiar.Text = "Limpiar Matriz";
             btnLimpiar.UseVisualStyleBackColor = true;
@@ -165,9 +180,10 @@ namespace Semana5
             // 
             // btnMostrar
             // 
-            btnMostrar.Location = new Point(34, 98);
+            btnMostrar.Location = new Point(24, 59);
+            btnMostrar.Margin = new Padding(2);
             btnMostrar.Name = "btnMostrar";
-            btnMostrar.Size = new Size(136, 34);
+            btnMostrar.Size = new Size(95, 20);
             btnMostrar.TabIndex = 1;
             btnMostrar.Text = "Mostrar";
             btnMostrar.UseVisualStyleBackColor = true;
@@ -175,9 +191,10 @@ namespace Semana5
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(34, 39);
+            btnAgregar.Location = new Point(24, 23);
+            btnAgregar.Margin = new Padding(2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(136, 34);
+            btnAgregar.Size = new Size(95, 20);
             btnAgregar.TabIndex = 0;
             btnAgregar.Text = "&Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
@@ -186,9 +203,11 @@ namespace Semana5
             // gbMantenimiento
             // 
             gbMantenimiento.Controls.Add(dgdatos);
-            gbMantenimiento.Location = new Point(28, 305);
+            gbMantenimiento.Location = new Point(20, 183);
+            gbMantenimiento.Margin = new Padding(2);
             gbMantenimiento.Name = "gbMantenimiento";
-            gbMantenimiento.Size = new Size(965, 277);
+            gbMantenimiento.Padding = new Padding(2);
+            gbMantenimiento.Size = new Size(676, 166);
             gbMantenimiento.TabIndex = 2;
             gbMantenimiento.TabStop = false;
             gbMantenimiento.Text = "Mantenimientos";
@@ -196,21 +215,23 @@ namespace Semana5
             // dgdatos
             // 
             dgdatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgdatos.Location = new Point(23, 46);
+            dgdatos.Location = new Point(16, 28);
+            dgdatos.Margin = new Padding(2);
             dgdatos.Name = "dgdatos";
             dgdatos.RowHeadersWidth = 62;
-            dgdatos.Size = new Size(920, 225);
+            dgdatos.Size = new Size(644, 135);
             dgdatos.TabIndex = 0;
             dgdatos.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1030, 594);
+            ClientSize = new Size(721, 356);
             Controls.Add(gbMantenimiento);
             Controls.Add(gbMatriz);
             Controls.Add(gbInformacon);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
